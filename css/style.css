@@ -1,0 +1,104 @@
+@import url(variables.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    > main{
+   
+    padding: 2rem;
+    margin: auto auto;
+    }
+    > header{
+    background-color:var(--primary);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    }
+
+}
+
+@media (min-width: 900px) {
+  main{
+     width: 50vw;
+  }
+}
+
+form{
+
+    > div{
+        display: flex;   
+    }
+}
+
+label{
+    display: inline-block;
+    width: 5rem;
+       
+}
+
+input{
+    flex: 1 1 250px;
+    padding: .2rem .2rem;
+    margin: 0.2rem 0;
+    
+    outline:solid 1px var(--primary);
+    border-style: none;
+
+    &:focus{
+        outline:solid 3px var(--primary);
+        background-color: var(--light-blue);
+    }   
+}
+
+#add, #delete{
+    padding: .5rem .75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    border-style: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:is(:hover, :focus){
+        
+        scale:1.05;
+    }
+}
+
+#add {
+    background-color: var(--light-gray);
+    color: var(--primary);
+    outline:solid 2px var(--primary);
+    
+}
+
+#delete {
+    background-color: var(--red);
+    color: var(--white);
+    width: 3rem;
+}
+
+
+
+table{
+    border: solid 2px var(--black);
+    width: 100%;
+    margin: 1rem 0;
+    
+    & th,td{
+       
+        text-align: start;
+        padding: 0.25rem 0.5rem;
+        text-transform: capitalize;
+    }
+    
+    & th{
+        background-color: var(--primary);
+        color: var(--white); 
+        
+    }
+
+}

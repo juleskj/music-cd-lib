@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music lib</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Music CDs</h1>
+    </header>
+    <main>
+        <form name="music_form">
+            <div>
+                <label for="author">Author</label>
+                <input name="author" id="author" type="text" placeholder="Author" required>
+
+            </div>
+            <div>
+                <label for="title">Title</label>
+                <input name="title" id="title" type="text" placeholder="Title" required>
+            </div>
+            <div>
+
+                <label for="year">Year</label>
+                <input min="0" name="year" id="year" type="number" placeholder="Year" required>
+
+            </div>
+
+            <button type="submit" id="add" aria-label="Add music entry">Add</button>
+        </form>
+
+
+        <table id="music_tbody">
+            <tr>
+                <th>author</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Ghost</td>
+                <td>Mummy dust</td>
+                <td>2015</td>
+                <td id="delete">Delete</td>
+            </tr>
+            <tr>
+                <td>Peach pit</td>
+                <td>Drop that Guillotine</td>
+                <td>2018</td>
+                <td id="delete">Delete</td>
+            </tr>
+            <tr>
+                <td>Hers</td>
+                <td>Speed racer</td>
+                <td>2017</td>
+                <td id="delete">Delete</td>
+            </tr>
+        </table>
+
+        <template id="trTemplate">
+            <tr>
+                <td>Ghost</td>
+                <td>Mummy dust</td>
+                <td>2015</td>
+                <td id="delete"> Delete</td>
+            </tr>
+        </template>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
